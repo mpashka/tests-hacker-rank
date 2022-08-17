@@ -1,4 +1,4 @@
-package com.mycompany.hr;
+package org.hr.hackerrank.w26;
 
 import java.util.*;
 
