@@ -2,7 +2,10 @@ package org.hr.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class JavaTest {
     private static final Logger log = LogManager.getLogger();
@@ -23,5 +26,15 @@ public class JavaTest {
     public void testMin() {
         int i = Integer.MIN_VALUE;
         log.info("{}, min+1:{}, min:{}, max:{}", -Integer.MIN_VALUE, -(Integer.MIN_VALUE+1), Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void stringArrayConverterTest() {
+        StringArrayConverter converter = new StringArrayConverter();
+        assertThat(converter.convert("abc", String[].class), is(new String[]{"abc"}));
+        assertThat(converter.convert("a,bc", String[].class), is(new String[]{"a","bc"}));
+        assertThat(converter.convert(",bc", String[].class), is(new String[]{"","bc"}));
+        assertThat(converter.convert("bc,", String[].class), is(new String[]{"bc",""}));
+        assertThat(converter.convert(",", String[].class), is(new String[]{"",""}));
     }
 }

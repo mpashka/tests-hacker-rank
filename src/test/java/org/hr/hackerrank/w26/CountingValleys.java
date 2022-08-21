@@ -1,15 +1,11 @@
 package org.hr.hackerrank.w26;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class CountingValleys {
 

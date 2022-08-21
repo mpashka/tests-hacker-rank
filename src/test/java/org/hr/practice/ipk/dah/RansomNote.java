@@ -1,17 +1,13 @@
 package org.hr.practice.ipk.dah;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 
 public class RansomNote {
     static boolean checkMagazineNoCount(String[] magazine, String[] note) {

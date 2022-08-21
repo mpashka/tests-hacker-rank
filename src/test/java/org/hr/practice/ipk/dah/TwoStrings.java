@@ -1,17 +1,15 @@
 package org.hr.practice.ipk.dah;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.BitSet;
+import java.util.Scanner;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 
 public class TwoStrings {
 
