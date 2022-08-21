@@ -8,15 +8,26 @@ import org.junit.jupiter.params.converter.SimpleArgumentConverter;
 import java.util.Arrays;
 
 public class ListNodeConverter extends SimpleArgumentConverter {
-    private static final Logger log = LogManager.getLogger();
 
     @Override
     protected ListNode convert(Object source, Class<?> targetType) throws ArgumentConversionException {
         if (ListNode.class.isAssignableFrom(targetType)) {
             if (source instanceof String) {
-                return Arrays.stream(source.toString().split("\\s*,\\s*"))
-                        .mapToInt(Integer::parseInt)
-                        .collect(ListNode::new, ListNode::append, ListNode::append);
+                String str = source.toString();
+                if (str.isBlank()) {
+                    return null;
+                }
+                ListNode first = null, last = null;
+                for (String s : str.split("\\s*,\\s*")) {
+                    int i = Integer.parseInt(s);
+                    if (first == null) {
+                        first = last = new ListNode(i);
+                    } else {
+                        last.next = new ListNode(i);
+                        last = last.next;
+                    }
+                }
+                return first;
             } else if (source == null) {
                 return null;
             }

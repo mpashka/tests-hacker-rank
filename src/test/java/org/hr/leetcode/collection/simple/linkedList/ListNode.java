@@ -1,5 +1,6 @@
 package org.hr.leetcode.collection.simple.linkedList;
 
+import java.util.Objects;
 import java.util.stream.Stream;
 
 public class ListNode {
@@ -21,10 +22,17 @@ public class ListNode {
 
     public static int[] toArray(ListNode node) {
         return node != null
-                ? Stream.iterate(node, n -> n.next != null, n -> n.next)
+                ? Stream.iterate(node, Objects::nonNull, n -> n.next)
                 .mapToInt(n -> n.val)
                 .toArray()
                 : EMPTY_ARRAY;
+    }
+
+    public static ListNode find(ListNode node, int val) {
+        return Stream.iterate(node, Objects::nonNull, n -> n.next)
+                .filter(n -> n.val == val)
+                .findAny()
+                .orElse(null);
     }
 
     public static ListNode append(ListNode p, ListNode n) {
