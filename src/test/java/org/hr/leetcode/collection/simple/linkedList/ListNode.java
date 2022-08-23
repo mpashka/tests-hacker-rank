@@ -20,6 +20,11 @@ public class ListNode {
         val = x;
     }
 
+    @Override
+    public String toString() {
+        return "{" + val + '}';
+    }
+
     public static int[] toArray(ListNode node) {
         return node != null
                 ? Stream.iterate(node, Objects::nonNull, n -> n.next)
