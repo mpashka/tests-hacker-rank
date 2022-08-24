@@ -81,4 +81,22 @@ public class JavaTest {
         Matcher matcher = ELEMENT_PATTERN.matcher(s);
         matcher.results().forEach(t -> log.info("{}", t.group(1)));
     }
+
+    @Test
+    public void arrayReflectionTest() {
+        {
+            Class<Integer[]> iClass = Integer[].class;
+            log.info("{} [{}]: {}[{}]", iClass, iClass.isArray(), iClass.getComponentType(), iClass.getComponentType().isPrimitive());
+        }
+
+        {
+            Class<int[]> iClass = int[].class;
+            log.info("{} [{}]: {}[{}]", iClass, iClass.isArray(), iClass.getComponentType(), iClass.getComponentType().isPrimitive());
+        }
+
+        {
+            Class<int[][]> iiClass = int[][].class;
+            log.info("{} [{}]: {}", iiClass, iiClass.isArray(), iiClass.getComponentType());
+        }
+    }
 }
