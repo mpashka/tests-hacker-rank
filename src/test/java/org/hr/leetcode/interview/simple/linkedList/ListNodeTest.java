@@ -1,9 +1,12 @@
 package org.hr.leetcode.interview.simple.linkedList;
 
+import org.hr.leetcode.interview.linkedList.ListNode;
+import org.hr.leetcode.interview.linkedList.ListNodeConverter;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 
 
 public class ListNodeTest {

@@ -4,7 +4,6 @@ import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.converter.SimpleArgumentConverter;
 
 import java.lang.reflect.Array;
-import java.util.regex.Pattern;
 
 public class ArrayConverter extends SimpleArgumentConverter {
 

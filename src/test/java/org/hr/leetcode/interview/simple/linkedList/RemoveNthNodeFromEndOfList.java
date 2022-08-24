@@ -1,5 +1,7 @@
 package org.hr.leetcode.interview.simple.linkedList;
 
+import org.hr.leetcode.interview.linkedList.ListNode;
+import org.hr.leetcode.interview.linkedList.ListNodeConverter;
 import org.hr.utils.IntArrayConverter;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;

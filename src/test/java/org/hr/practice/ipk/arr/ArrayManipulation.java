@@ -5,7 +5,11 @@ import org.junit.jupiter.api.Test;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
+import java.util.Map;
+import java.util.NavigableMap;
+import java.util.Objects;
+import java.util.Scanner;
+import java.util.TreeMap;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasEntry;
