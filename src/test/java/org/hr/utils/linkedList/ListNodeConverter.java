@@ -1,4 +1,4 @@
-package org.hr.leetcode.interview.linkedList;
+package org.hr.utils.linkedList;
 
 import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.converter.SimpleArgumentConverter;

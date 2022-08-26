@@ -1,6 +1,6 @@
 package org.hr.leetcode.interview.hard.linkedList;
 
-import org.hr.leetcode.interview.linkedList.ListNode;
+import org.hr.utils.linkedList.ListNode;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

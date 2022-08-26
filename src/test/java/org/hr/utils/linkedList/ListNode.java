@@ -1,11 +1,9 @@
-package org.hr.leetcode.interview.linkedList;
+package org.hr.utils.linkedList;
 
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.PrimitiveIterator;
-import java.util.Spliterator;
 import java.util.regex.Pattern;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class ListNode {

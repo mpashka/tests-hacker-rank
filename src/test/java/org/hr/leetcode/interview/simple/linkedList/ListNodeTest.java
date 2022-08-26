@@ -1,7 +1,7 @@
 package org.hr.leetcode.interview.simple.linkedList;
 
-import org.hr.leetcode.interview.linkedList.ListNode;
-import org.hr.leetcode.interview.linkedList.ListNodeConverter;
+import org.hr.utils.linkedList.ListNode;
+import org.hr.utils.linkedList.ListNodeConverter;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
