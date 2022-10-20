@@ -10,7 +10,10 @@ import static org.hamcrest.Matchers.is;
 
 public class TrappingRainWater {
     public int trap(int[] height) {
-        int maxVolume = 0, volume = 0, idx, anotherIdx, direction, startLen, anotherLen;
+        if (height.length <= 2) {
+            return 0;
+        }
+        int volume = 0, idx, anotherIdx, direction, startLen, anotherLen;
         if (height[0] < height[height.length - 1]) {
             idx = 0;
             anotherIdx = height.length - 1;
@@ -26,14 +29,12 @@ public class TrappingRainWater {
         while (true) {
             idx += direction;
             if (idx == anotherIdx) {
-                return Math.max(volume, maxVolume);
+                return volume;
             }
             int len = height[idx];
             if (len < startLen) {
                 volume += startLen - len;
             } else {
-                maxVolume = Math.max(volume, maxVolume);
-                volume = 0;
                 if (len > anotherLen) {
                     // switch direction
                     int o = anotherIdx;
@@ -49,6 +50,8 @@ public class TrappingRainWater {
 
     @ParameterizedTest
     @CsvSource(value = {
+            "0:0",
+            "0,2:0",
             "0,1,0,2,1,0,1,3,2,1,2,1:6",
             "4,2,0,3,2,5:9",
     }, delimiter = ':')
