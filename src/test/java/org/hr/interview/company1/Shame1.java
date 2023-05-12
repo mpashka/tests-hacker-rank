@@ -1,4 +1,4 @@
-package org.hr.yandex;
+package org.hr.interview.company1;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;

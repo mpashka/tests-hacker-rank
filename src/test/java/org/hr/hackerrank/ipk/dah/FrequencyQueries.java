@@ -1,4 +1,4 @@
-package org.hr.practice.ipk.dah;
+package org.hr.hackerrank.ipk.dah;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;

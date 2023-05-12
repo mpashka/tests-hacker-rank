@@ -1,4 +1,4 @@
-package org.hr.practice.ipk.arr;
+package org.hr.hackerrank.ipk.arr;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.junit.jupiter.api.Test;

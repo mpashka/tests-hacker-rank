@@ -1,4 +1,4 @@
-package org.hr.vk;
+package org.hr.interview.vk;
 
 import java.util.ArrayList;
 import java.util.List;

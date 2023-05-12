@@ -1,4 +1,4 @@
 /**
  * Dictionaries and Hashmaps
  */
-package org.hr.practice.ipk.dah;
+package org.hr.hackerrank.ipk.dah;
